@@ -2,7 +2,7 @@
   "name": "administration-docker-cluster",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   },
   "forwardPorts": [7474, 7687, 17474, 17687, 27474, 27687, 37474, 37687, 47474, 47687],
   "onCreateCommand": "until docker info >/dev/null 2>&1; do sleep 1; done && docker compose -f cluster/docker-compose.yml pull",
